@@ -39,7 +39,7 @@ const state = useSelector(state => state);
     enterButton />
    </div>
  
-<h1  style={{color:'#ffffffd0',textAlign:'center'}}>setCity</h1>
+<h1  style={{color:'#ffffffd0',textAlign:'center'}}>Brussels</h1>
     
     </div>
 
