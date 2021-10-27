@@ -3,13 +3,17 @@ import React ,{useState , useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux"
 import Container from './Components/Container/Container';
 import { fetchweather } from './redux/slices/wslices';
+import './container.css'
+import 'antd/dist/antd.css'
+import  { Input  } from 'antd';
+const { Search } = Input;
 
 function App() {
-  const [city, setCity] = useState("chicago");
+  const [city, setCity] = useState("");
 
 const dispatch = useDispatch();
 useEffect(() => {
-  dispatch(fetchweather ("new york"));
+  dispatch(fetchweather (""));
 }, []);
 
 
@@ -17,10 +21,36 @@ const state = useSelector(state => state);
   const { weather, loading, error } = state;
   console.log(state);
 
-  return (
-    <div className="App">
-     <Container/>
+  const onSearch = value => console.log(value);
+
+    
+  
+    return (
+    <>
+    <div className="container">
+<div className="container--card">
+    <h1 style={{color:'#ffffffd0'}}>Wheather</h1>
+    
+    <div>
+    <Search value={city}  
+    onChange={(e)=>setCity(e.target.value)} 
+    placeholder="Search your city" 
+    onSearch={onSearch} 
+    onClick={()=>dispatch(fetchweather(city))}
+    enterButton />
+   </div>
+ 
+
+    
     </div>
+
+    </div>
+   
+   
+    </>
+  
+
+  
   );
 }
 
