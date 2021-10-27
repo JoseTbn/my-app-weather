@@ -5,14 +5,25 @@ import  { Input  } from 'antd';
 const { Search } = Input;
 
 export default function Container() {
-  return (
+  
+//   const enterButton = (
+//       <enterButton style={{
+//           background: '#000000df',
+//       }}
+//       />
+      
+//   );
+  
+    const onSearch = value => console.log(value);
+  
+    return (
     <>
     <div className="container">
 <div className="container--card">
     <h1 style={{color:'#ffffffd0'}}>Wheather</h1>
     
     <div>
-    <Search placeholder="input search text" enterButton="Search" size="large" loading />
+    <Search placeholder="Search your city" onSearch={onSearch} enterButton />
    </div>
  
 
