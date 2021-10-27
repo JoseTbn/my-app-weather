@@ -1,15 +1,14 @@
 import './App.css';
 import React ,{useState , useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux"
-import Container from './Components/Container/Container';
 import { fetchweather } from './redux/slices/wslices';
-import './container.css'
+
 import 'antd/dist/antd.css'
 import  { Input  } from 'antd';
 const { Search } = Input;
 
 function App() {
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState("Brussels");
 
 const dispatch = useDispatch();
 useEffect(() => {
@@ -29,7 +28,7 @@ const state = useSelector(state => state);
     <>
     <div className="container">
 <div className="container--card">
-    <h1 style={{color:'#ffffffd0'}}>Wheather</h1>
+    <h1 style={{color:'#ffffffd0',textAlign:'center'}}>Wheather</h1>
     
     <div>
     <Search value={city}  
@@ -40,7 +39,7 @@ const state = useSelector(state => state);
     enterButton />
    </div>
  
-
+<h1  style={{color:'#ffffffd0',textAlign:'center'}}>setCity</h1>
     
     </div>
 

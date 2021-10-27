@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
 
 body {
@@ -15,4 +13,29 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  
+  background: url(https://source.unsplash.com/1880x870/?weather,water) no-repeat center center fixed;
+  -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+.container--card{
+background: #000000d0;
+color: #ffffff;
+padding: 5em;
+position: relative;
+width: 100%;
+max-width: 50em;
+border-radius: 32px;
+height: 50vh;
 }
