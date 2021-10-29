@@ -41,6 +41,6 @@
 .conatiner--data{
 display: flex;
 justify-content: space-between;
-
+padding-top: 46px;
 
 }
